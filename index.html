@@ -1,0 +1,62 @@
+<html>
+  <link href="http://www.eucalyptus.com/sites/all/themes/euca/css/html-reset.css" type="text/css" rel="stylesheet" />
+  <!-- <link href="http://www.eucalyptus.com/sites/all/themes/euca/css/euca.css" type="text/css" rel="stylesheet" /> -->
+<style type="text/css" title="currentStyle">
+  @import "jquery.css";
+  @import "jquery-table.css";
+</style>
+<script type="text/javascript" language="javascript" src="jquery.js"></script> 
+<script type="text/javascript" language="javascript" src="jquery.dataTables.js"></script> 
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+	
+	var urlAsLink = function (o) {
+        return '<a href="' + o.url + '">' + 'Download </a>';
+	};
+    var imageCatagory = function (o) {
+        var word = o.url;
+        var ctgy = word.split("/"); 
+        return ctgy[0];
+    }; 
+    $('#example').dataTable( {
+	    "bProcessing": true,
+		"sAjaxSource": "catalog-web",
+		"sAjaxDataProp": "images",
+		"fnServerData":  function ( src, data, cb ) { $.ajax({'dataType': 'json', 'type': 'GET', 'url': src, 'data': data, 'success': cb}); },
+		"aoColumns": [
+		  { "mDataProp": urlAsLink },
+		  { "mDataProp": "version" },
+		  { "mDataProp": "description" },
+		  { "mDataProp": "contact" },
+		  { "mDataProp": "architecture" },
+		  { "mDataProp": "os" }
+		]
+	} );    
+} );
+</script>
+<title>Eucalyptus Machine Images</title>
+<body>
+<center><h1>Eucalyptus Machine Images</h1></center>
+<div id="dynamic">
+<table id="example" class="display">
+<thead>
+	<tr>
+		<th>Download</th>
+		<th>Version</th>
+		<th>Description</th>
+		<th>Contact</th>
+		<th>Architecture</th>
+		<th>OS / Distro</th>
+	</tr>
+</thead>
+<tbody>
+	<tr> 
+		<td colspan="6" class="dataTables_empty">Loading data from server</td> 
+	</tr> 
+</tbody>
+</table>
+</div>
+</body>
+</html>
+
