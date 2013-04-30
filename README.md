@@ -22,7 +22,7 @@ git clone https://github.com/eucalyptus/emis-catalog-s3-site.git
 
 ```
 {
-      "url": "<S3 Bucket URL or HTTP URL to tar-gzipped image>",
+      "url": "<S3 Bucket URL or HTTP URL to tar-gzipped image; if its in an S3 Bucket, make sure the ACLs are set to public>",
       "recipe": "<distro base of image - i.e. centos-based, ubuntu-based, debian-based, etc.>",
       "contact": "<email address of person maintaining the email>",
       "stamp": "<custom stamp created by the following command: date +%s|md5sum|sed '1,$ s/\(....\)\(....\).*/\1-\2/'>",
