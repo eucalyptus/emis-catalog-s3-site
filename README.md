@@ -36,7 +36,7 @@ git clone https://github.com/eucalyptus/emis-catalog-s3-site.git
     },
 ```
 
-* <i>(Optional - Extra Credit)</i> Upload local tar-gzipped file using eustore to a Eucalyptus cloud, and run eutester case to confirm that the image is valid.  For more information, please check out the <a href="https://github.com/eucalyptus/image-verification-results.git">eucalyptus/image-verification-results repo</a>.
+* <i>(Optional - Extra Credit)</i> <a href="http://www.eucalyptus.com/docs/3.2/cli/eustore-install-image.html#eustore-install-image">Upload local tar-gzipped file using eustore</a> to a Eucalyptus cloud, and run eutester case to confirm that the image is valid.  For more information, please check out the <a href="https://github.com/eucalyptus/image-verification-results.git">eucalyptus/image-verification-results repo</a>. <i><b>Note:</b> If there is a desire to use the <a href="https://communitycloud.eucalyptus.com/">Eucalyptus Community Cloud</a>, please contact the <a href="mailto:ecc-administrator@eucalyptus.com">ECC Administrator</a> in order to upload the kernel and ramdisk needed for the image.</i>
 
 * Submit a pull request to eucalyptus/emis-catalog-s3-site repo. (We will update http://emis-catalog.s3.amazonaws.com/index.html after the pull request has been merged).
 
