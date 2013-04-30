@@ -12,10 +12,10 @@ git clone https://github.com/eucalyptus/emis-catalog-s3-site.git
 * Make sure image is in a tar-gzipped file that has the following layout:
 
 ```
-* image file
+* image file (needs to end with .img)
 * kvm-kernel folder
-  * ramdisk
-  * kernel
+  * ramdisk (contains one of the following: initr(d|amfs) or loader in the name)
+  * kernel (contains vmlinu in the name)
 ```
 
 * Open up the catalog-web file and add in a section for the image to be accessed:
