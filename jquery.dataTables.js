@@ -966,7 +966,7 @@
 			 */
 			this.oLanguage = {
 				"sProcessing": "Processing...",
-				"sLengthMenu": "Show _MENU_ entries",
+				"sLengthMenu": "Show _MENU_",
 				"sZeroRecords": "No matching records found",
 				"sEmptyTable": "No data available in table",
 				"sLoadingRecords": "Loading...",
@@ -1400,7 +1400,7 @@
 			 *   from the first array, and the displayed value to the end user comes from the second
 			 *   array. 2D example: [ [ 10, 25, 50, 100, -1 ], [ 10, 25, 50, 100, 'All' ] ];
 			 */
-			this.aLengthMenu = [ 10, 25, 50, 100, 'All' ];
+			this.aLengthMenu = [ [ 10, 50, -1 ], ['10 images', '50 images', 'All images' ] ];
 			
 			/*
 			 * Variable: iDraw

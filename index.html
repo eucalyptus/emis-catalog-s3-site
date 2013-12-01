@@ -25,12 +25,13 @@ $(document).ready(function() {
 		"sAjaxDataProp": "images",
 		"fnServerData":  function ( src, data, cb ) { $.ajax({'dataType': 'json', 'type': 'GET', 'url': src, 'data': data, 'success': cb}); },
 		"aoColumns": [
-		  { "mDataProp": urlAsLink },
+		  { "mDataProp": "name"},
 		  { "mDataProp": "version" },
 		  { "mDataProp": "description" },
 		  { "mDataProp": "contact" },
 		  { "mDataProp": "architecture" },
-		  { "mDataProp": "os" }
+		  { "mDataProp": "os" },
+		  { "mDataProp": urlAsLink }
 		]
 	} );    
 } );
@@ -38,16 +39,24 @@ $(document).ready(function() {
 <title>Eucalyptus Machine Images</title>
 <body>
 <center><h1>Eucalyptus Machine Images</h1></center>
+
+<p>To install a Eucalyptus image via Eustore:</p>
+
+<p><code>eustore-install-image -b bucketname -i image-id</code></p>
+
+<p>...where <i>bucketname</i> is an arbitrary bucket name of your choosing, and <i>image-id</i> is the ID of an image, below.</p>
+
 <div id="dynamic">
 <table id="example" class="display">
 <thead>
 	<tr>
-		<th>Download</th>
+		<th>ID</th>
 		<th>Version</th>
 		<th>Description</th>
 		<th>Contact</th>
 		<th>Architecture</th>
 		<th>OS / Distro</th>
+		<th>Download</th>
 	</tr>
 </thead>
 <tbody>
