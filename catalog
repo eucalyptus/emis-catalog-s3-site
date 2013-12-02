@@ -198,21 +198,6 @@
       "testing": "passed"
     }, 
     {
-      "single-kernel": "False",
-      "version": "starter",
-      "url": "http://emis.eucalyptus.com/starter-emis/euca-centos5-2013.06.18-x86_64-root.tgz",
-      "hypervisors-supported": [ "kvm" ],
-      "recipe": "centos-based",
-      "stamp": "c359-54b6",
-      "contact": "images@lists.eucalyptus.com",
-      "architecture": "x86_64",
-      "date": "20130618112358",
-      "os": "centos",
-      "description": "CentOS 5.9 1.4GB root, Hypervisor-Specific Kernel; 2.6.18-348.6.1.el5 kernel version; root user enabled; Selinux enabled; euca2ools 2.1.3 installed",
-      "username": "root",
-      "testing": "passed"
-    },
-    {
       "url": "http://emis.eucalyptus.com/starter-emis/euca-large-centos-2012.1.14-x86_64.tgz", 
       "recipe": "centos-based", 
       "contact": "images@lists.eucalyptus.com", 

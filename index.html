@@ -21,7 +21,7 @@ $(document).ready(function() {
     }; 
     $('#example').dataTable( {
 	    "bProcessing": true,
-		"sAjaxSource": "catalog-web",
+		"sAjaxSource": "catalog",
 		"sAjaxDataProp": "images",
 		"fnServerData":  function ( src, data, cb ) { $.ajax({'dataType': 'json', 'type': 'GET', 'url': src, 'data': data, 'success': cb}); },
 		"aoColumns": [
